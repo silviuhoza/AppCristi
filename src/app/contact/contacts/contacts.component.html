@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-10">
+    <div class="row">
+      <div class="col-md-6">
+        <h2> <i class="fa fa-users text-info">Contacts</i> </h2>
+      </div>
+
+    </div>
+
+    <table *ngIf="contacts?.length > 0;else noContacts" class="table table-striped">
+      <thead class="thead-inverse">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+          <td> {{ contact.firstName }} </td>
+          <td> {{ contact.lastName }} </td>
+          <td> {{ contact.email }} </td>
+          <td> {{ contact.phone }} </td>
+          <td> <a routerLink="/contacts/{{contact.id}}" class="btn btn-outline-info bt-sm"> <i class="fa fa-arrow-circle-o-right"></i>
+              Details </a> </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noContacts>
+      <h5 class="text-primary">You don't have contacts on the system, please add using the New button!</h5>
+    </ng-template>
+  </div>
+  <div class="col-md-2">
+<a routerLink="/contacts/add" class="btn btn-outline-success"> <i class="fa fa-plus"></i> Add contact </a>
+  </div>
+</div>

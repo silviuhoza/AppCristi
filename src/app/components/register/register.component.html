@@ -1,0 +1,54 @@
+<div class="row">
+  <div class=" col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center pb-4 pt-3"><i class="fa fa-lock"></i> <span class="text-primary"> Contact-App</span>
+          Login</h1>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" formControlName="firstName" [ngClass]="{'is-invalid': formErrors.firstName}"
+              (blur)="logValidationErrors()">
+
+            <div class="invalid-feedback" *ngIf="formErrors.firstName">
+              {{formErrors.firstName}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" formControlName="lastName" [ngClass]="{'is-invalid': formErrors.lastName}"
+              (blur)="logValidationErrors()">
+
+            <div class="invalid-feedback" *ngIf="formErrors.lastName">
+              {{formErrors.lastName}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" formControlName="email" [ngClass]="{'is-invalid': formErrors.email}"
+              (blur)="logValidationErrors()">
+
+            <div class="invalid-feedback" *ngIf="formErrors.email">
+              {{formErrors.email}}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" formControlName="password" [ngClass]="{'is-invalid': formErrors.password}"
+                (blur)="logValidationErrors()">
+              <div class="invalid-feedback" *ngIf="formErrors.password">
+                {{formErrors.password}}
+              </div>
+            </div>
+
+
+          </div>
+          <input type="submit" value="Register" class="btn btn-block btn-outline-primary">
+        </form>
+      </div>
+    </div>
+  </div>

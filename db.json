@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Jhon",
+      "lastName": "Doe",
+      "email": "jdoe@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "firstName": "Kevin",
+      "lastName": "Daniels",
+      "email": "kevin@gmail.com",
+      "password": "123456"
+    },
+    {
+      "firstName": "Adi",
+      "lastName": "Asa",
+      "email": "adi@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "firstName": "Alina",
+      "lastName": "Franciuc",
+      "email": "alina@gmail.com",
+      "password": "123456",
+      "id": 5
+    }
+  ],
+  "contacts": [
+    {
+      "firstName": "Dave",
+      "lastName": "Dack",
+      "email": "david@gmail.com",
+      "phone": "1234567898",
+      "id": 3
+    },
+    {
+      "firstName": "Dan",
+      "lastName": "Ilie",
+      "email": "dany@gmail.com",
+      "phone": "1234567890",
+      "id": 5
+    },
+    {
+      "firstName": "Adina",
+      "lastName": "Neagu",
+      "email": "adina@gmail.com",
+      "phone": "1234567890",
+      "id": 6
+    }
+  ]
+}

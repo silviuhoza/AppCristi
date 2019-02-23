@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-6 mb-2">
+    <a routerLink="{{stateUrl}}" class="btn btn-outline-info">
+      <i class="fa fa-arrow-circle-o-left"></i> {{titleButton}}
+    </a>
+  </div>
+  <div class="col-md-6">
+
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    {{stateTitle}}
+  </div>
+  <div class="card-body">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+           <input type="text" name="firstName" class="form-control" formControlName="firstName" [ngClass]="{'is-invalid': formErrors.firstName}" (blur)="logValidationErrors()">
+
+        <div [hidden]="" class="invalid-feedback"  *ngIf="formErrors.firstName" >
+          {{formErrors.firstName}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" name="lastName"  formControlName="lastName"  [ngClass]="{'is-invalid': formErrors.lastName}" (blur)="logValidationErrors()">
+
+        <div [hidden]="" class="invalid-feedback"  *ngIf="formErrors.lastName">
+            {{formErrors.lastName}}
+        </div>
+
+        
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email" formControlName="email" [ngClass]="{'is-invalid': formErrors.email}" (blur)="logValidationErrors()">
+
+        <div [hidden]="" class="invalid-feedback"  *ngIf="formErrors.email">
+              {{formErrors.email}}
+        </div>
+
+        
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" name="phone" formControlName="phone" [ngClass]="{'is-invalid': formErrors.phone}" (blur)="logValidationErrors()">
+        <div [hidden]="" class="invalid-feedback"  *ngIf="formErrors.phone">
+          {{formErrors.phone}}
+        </div>
+
+      </div>
+
+    
+
+     <input type="submit" value="{{submitButton}}"  [disabled]="contactForm.invalid" class="btn btn-outline-primary btn-block">
+    </form>
+  </div>
+
